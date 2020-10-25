@@ -29,7 +29,7 @@ const Navbar = () => {
                     className="logo"
                     style={{ color: randomColor() }}
                 >
-                    {!isMobile ? "The Happy Space" : "THS"}
+                    {!isMobile ? "Our Happy Space" : "OHS"}
                 </Typography.Title>
             ) : null}
             <Switch
