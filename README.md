@@ -1,4 +1,4 @@
-![Logo](https://github.com/r-ush/ourhappyspace-frontend/blob/main/assets/flex.png)                                                                                                                        
+![Logo](https://github.com/r-ush/ourhappyspace-frontend/blob/master/assets/flex.png)                         
 <h1 align="center">Our Happy Space</h1> 
 
 <h4 align="center">A feed of positive news stories, to brighten your day.</h4>
