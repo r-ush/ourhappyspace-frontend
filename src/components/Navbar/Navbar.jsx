@@ -53,9 +53,11 @@ const Navbar = () => {
 
     const onChange = (checked) => {
         if (checked) {
-            return localStorage.setItem("happyMode", true);
+            localStorage.setItem("happyMode", true);
+            return history.push("/");
         }
-        return localStorage.setItem("happyMode", false);
+        localStorage.setItem("happyMode", false);
+        return history.push("/");
     };
 
     return (

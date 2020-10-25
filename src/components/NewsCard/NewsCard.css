@@ -1,5 +1,5 @@
 .news-card {
-    width: 30%;
+    width: 35%;
     margin: 2rem 5rem;
     border-radius: 25px;
 }
@@ -38,7 +38,27 @@ a {
 
 @media only screen and (max-width: 600px) {
     .news-card {
-        margin: 0;
+        width: auto;
         flex-grow: 1;
+        margin: 3rem;
+    }
+    .news-img {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-self: center;
+    }
+
+    .news-card-text {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .news-title {
+        padding: 1rem;
+    }
+
+    .news-card-footer {
+        padding: 1rem;
     }
 }
