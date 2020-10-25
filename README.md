@@ -1,65 +1,56 @@
-## Template repo for React
+![Logo](https://github.com/r-ush/ourhappyspace-frontend/blob/master/assets/flex.png)                         
+<h1 align="center">Our Happy Space</h1> 
 
-Made for ease of access in starting a react app, the config takes around 15-20 mins everytime! This will help avoid that.
+<h4 align="center">A feed of positive news stories, to brighten your day.</h4>
+<h4 align="center">Don't worry if you are too happy, you can search or view the normal news as well</h4>
 
-## Packages Installed
 
-It has the following packages pre-installed
-- All packages with Create-React-App
-- React-router-dom
-- Prettier
-- Husky
-- Lint-Staged
-- All plugins for React, Lint, Prettier and Husky.
+## Basic Overview
+A full stack web app built with ReactJS, Express, and Node and our backbone Sentiment Analysis that displays a feed of positive news articles.<br>
+<br>
+You can search for specific news where in we will be showing you first all the positive new and then some of the negative ones too ;)
+<br>
 
-All Dependencies- 
-    <pre>
-    "dependencies": {
-      "@testing-library/jest-dom": "^4.2.4",
-      "@testing-library/react": "^9.3.2",
-      "@testing-library/user-event": "^7.1.2",
-      "react": "^16.13.1",
-      "react-dom": "^16.13.1",
-      "react-scripts": "3.4.1",
-      "react-router-dom": "^5.2.0"
-    }
-    </pre>
-    <pre>
-    "devDependencies": {
-      "eslint-config-airbnb": "^18.2.0",
-      "eslint-config-prettier": "^6.11.0",
-      "eslint-plugin-import": "^2.22.0",
-      "eslint-plugin-jsx-a11y": "^6.3.1",
-      "eslint-plugin-prettier": "^3.1.4",
-      "eslint-plugin-react": "^7.20.3",
-      "husky": "^4.2.5",
-      "lint-staged": "^10.2.11",
-      "prettier": "^2.0.5"
-    }
-    </pre>
+Bad news is everywhere and easy to find. Yes, problems should be exposed so they can be fixed but what about all of the great things going on currently? Our Happy Space is built to encourage people to find positivity in the world and give them something to look forward to after reading the news. It uses <a href="https://github.com/thisandagain/sentiment">sentiment</a> to analyze and filter negative news articles from News data provided by the <a href="https://newsapi.org/">News API</a>. 
 
-## GitHub Templates
-It also includes PR and Issue templates for github.
-Refer to the article for guidelines about the github templates I have used.
+//app feed home ss
+<br>
+<br>
 
-[Github workflow blog from dev.to](https://dev.to/jorenrui/a-look-into-how-i-manage-my-personal-projects-my-git-github-workflow-1e7h)
+## Live Site
+Live on: https://ourhappy.space <br/>
+Backend: https://ourhappyspace.herokuapp.com <br/>
+Frontend: https://ohs.netlify.app <br/>
 
-## Available Scripts
+## Repositories
+[OurHappySpace Frontend](https://github.com/r-ush/ourhappyspace-frontend) <br/>
+[OurHappySpace Backend](https://github.com/ShubhamPalriwala/ourhappyspace-backend)
 
-In the project directory, you can run:
+<br>
+<br>
 
-### `yarn start`
+## Built With
+### Front end
+* <a href="https://reactjs.org">React</a>
+### Back end
+* <a href="https://expressjs.com/">Express</a>
+* <a href="https://nodejs.org/en">Node</a>
+<br>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run Locally
+* Run these commands first:
+```
+$ git clone https://github.com/r-ush/ourhappyspace-frontend.git
+$ cd ourhappyspace-frontend
+$ npm install
+$ npm run dev
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn build`
+Visit http://localhost:3000 to view the web app.
+<br>
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## License
+<a href="https://opensource.org/licenses/mit-license.php">MIT</a>
