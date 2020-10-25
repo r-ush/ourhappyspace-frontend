@@ -7,10 +7,14 @@ import { SearchOutlined, SmileOutlined } from "@ant-design/icons";
 import "./Navbar.css";
 import randomColor from "utils/randomColor";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [showTextBox, setShowTextBox] = useState(false);
+
+    const history = useHistory();
+
     const onSearch = (value) => {
         console.log(value);
         const data = {
@@ -30,6 +34,9 @@ const Navbar = () => {
                     "searchData",
                     JSON.stringify(response.data.positive)
                 );
+            })
+            .then(() => {
+                history.push("/search");
             })
             .catch((error) => {
                 console.log(error);
@@ -57,6 +64,10 @@ const Navbar = () => {
                 <Typography.Title
                     className="logo"
                     style={{ color: randomColor() }}
+                    onClick={() => {
+                        localStorage.removeItem("searchData");
+                        history.push("/");
+                    }}
                 >
                     {!isMobile ? "Our Happy Space" : "OHS"}
                 </Typography.Title>
