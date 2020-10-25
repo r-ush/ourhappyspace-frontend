@@ -8,22 +8,58 @@ const axios = require("axios");
 
 const Main = () => {
     const [articles, setArticles] = useState([]);
+    const [happyMode, setHappyMode] = useState();
+
     useEffect(() => {
-        const config = {
+        function checkUsetData() {
+            const item = localStorage.getItem("happyMode");
+            console.log("checking for happyMode");
+            if (item) {
+                setHappyMode(item);
+            }
+        }
+
+        window.addEventListener("storage", checkUsetData);
+
+        return () => {
+            window.removeEventListener("storage", checkUsetData);
+        };
+    }, []);
+
+    useEffect(() => {
+        console.log("happy mode", happyMode);
+        if (happyMode) {
+            const config = {
+                method: "get",
+                url: "https://ourhappyspace.herokuapp.com/positivenews",
+                headers: {},
+            };
+
+            return axios(config)
+                .then((response) => {
+                    console.log("Happy news:>>", response.data);
+                    return setArticles(response.data.articles);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+        const configAllNews = {
             method: "get",
             url: "https://ourhappyspace.herokuapp.com/allnews",
             headers: {},
         };
 
-        axios(config)
+        return axios(configAllNews)
             .then((response) => {
                 console.log(response.data);
-                setArticles(response.data.articles);
+                return setArticles(response.data.articles);
             })
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
+    }, [happyMode]);
+
     return (
         <div className="news">
             {articles.map((article, index) => (
